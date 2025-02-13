@@ -33,21 +33,24 @@
             font-size: 20px;
             color: #d147a3;
         }
-        /* НОВОЕ: делаем сетку для фото */
+        
+        /* Новый стиль для контейнера изображений */
         #imagesContainer {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптация под экран */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  /* Центрируем фото по горизонтали */
+            align-items: center;  /* Центрируем фото по вертикали */
             gap: 10px; /* Отступы между фото */
-            justify-content: center; /* Выравнивание фото */
             margin-top: 20px;
         }
-        /* Делаем все фото одинакового размера */
+
+        /* Стиль для каждого изображения */
         #imagesContainer img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover; /* Чтобы фото не искажались */
-            border-radius: 10px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            width: 200px;  /* Ширина 200px */
+            height: 200px; /* Высота 200px */
+            object-fit: cover;  /* Обрезка изображений без искажения */
+            border-radius: 10px; /* Скругляем углы */
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);  /* Тень */
         }
     </style>
 </head>
@@ -60,7 +63,8 @@
         <button onclick="showImages()">Ну, наверное, Женя и Оля 🤭</button>
         <p id="message">Правильно! 💖</p>
         
-        <div id="imagesContainer"></div> <!-- Здесь будут фото -->
+        <!-- Контейнер для картинок -->
+        <div id="imagesContainer"></div>
     </div>
 
     <script>
@@ -68,7 +72,7 @@
             document.getElementById('message').style.display = 'block';
             let imagesContainer = document.getElementById('imagesContainer');
 
-            // Добавляем изображения в контейнер
+            // Меняем содержимое контейнера на картинки
             imagesContainer.innerHTML = `
                 <img src="images/photo1.png" alt="Фото 1">
                 <img src="images/photo2.png" alt="Фото 2">
