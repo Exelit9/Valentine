@@ -37,13 +37,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px; /* Отступы между картинками */
+            gap: 10px; /* Отступы между фото */
             margin-top: 20px;
         }
         #imagesContainer img {
-            height: 200px; /* Одинаковая высота для всех фото */
-            width: auto; /* Автоматическая ширина, чтобы не искажалось */
-            max-width: 100%; /* Чтобы не выходили за границы экрана */
+            width: 150px; /* Одинаковая ширина */
+            height: 150px; /* Одинаковая высота */
+            object-fit: cover; /* Обрезка без искажения */
             border-radius: 10px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
