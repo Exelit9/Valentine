@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой Валентин 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #d147a3;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ответь на вопрос 💕</h2>
+        <img src="D:\images\photo1.png" alt="Фото 1">
+        <img src="D:\images\photo4.png" alt="Фото 4">
+        <img src="D:\images\photo5.png" alt="Фото 5">
+        <p>Кто самый прекрасный человек на свете? 😊</p>
+        <button onclick="checkAnswer('Ты!')">Я</button>
+        <button onclick="checkAnswer('Ты!')">Конечно, я!</button>
+        <button onclick="checkAnswer('Ты!')">Ну, наверное, я 🤭</button>
+        <p id="message">Правильно! 😍 Ты моя любовь! 💖</p>
+        <img id="finalPhoto1" src="D:\images\photo2.png" alt="Фото 2" style="display: none;">
+        <img id="finalPhoto2" src="D:\images\photo3.png" alt="Фото 3" style="display: none;">
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('finalPhoto1').style.display = 'block';
+            document.getElementById('finalPhoto2').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
