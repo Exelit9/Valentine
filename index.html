@@ -25,12 +25,17 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            margin: 5px;
         }
         #message {
             display: none;
             margin-top: 20px;
             font-size: 20px;
             color: #d147a3;
+        }
+        .hidden-images {
+            display: none;
+            margin-top: 20px;
         }
         img {
             max-width: 100%;
@@ -43,22 +48,24 @@
     <div class="container">
         <h2>Ответь на вопрос 💕</h2>
         <p>Самая прекрасная пара на свете? 😊</p>
-        <button onclick="checkAnswer('Ты!')">Мы</button>
-        <button onclick="checkAnswer('Ты!')">Конечно, Мы!</button>
-        <button onclick="checkAnswer('Ты!')">Ну, наверное, Женя и Оля 🤭</button>
-        <p id="message">Правильно!💖</p>
-        <img id="finalPhoto1" src="images\photo1.png" alt="Фото 2" style="display: none;">
-        <img id="finalPhoto2" src="images\photo2.png" alt="Фото 3" style="display: none;">
-        <img id="finalPhoto1" src="images\photo3.png" alt="Фото 2" style="display: none;">
-        <img id="finalPhoto2" src="images\photo4.png" alt="Фото 3" style="display: none;">
-        <img id="finalPhoto2" src="images\photo5.png" alt="Фото 3" style="display: none;">
+        <button onclick="showImages()">Мы</button>
+        <button onclick="showImages()">Конечно, Мы!</button>
+        <button onclick="showImages()">Ну, наверное, Женя и Оля 🤭</button>
+        <p id="message">Правильно! 💖</p>
+        
+        <div id="imagesContainer" class="hidden-images">
+            <img src="images/photo1.png" alt="Фото 1">
+            <img src="images/photo2.png" alt="Фото 2">
+            <img src="images/photo3.png" alt="Фото 3">
+            <img src="images/photo4.png" alt="Фото 4">
+            <img src="images/photo5.png" alt="Фото 5">
+        </div>
     </div>
 
     <script>
-        function checkAnswer(answer) {
+        function showImages() {
             document.getElementById('message').style.display = 'block';
-            document.getElementById('finalPhoto1').style.display = 'block';
-            document.getElementById('finalPhoto2').style.display = 'block';
+            document.getElementById('imagesContainer').style.display = 'block';
         }
     </script>
 </body>
