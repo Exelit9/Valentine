@@ -11,7 +11,7 @@
             background-color: #ffe4e1;
         }
         .container {
-            max-width: 400px;
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             background: white;
@@ -34,7 +34,18 @@
             color: #d147a3;
         }
         #imagesContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Отступы между картинками */
             margin-top: 20px;
+        }
+        #imagesContainer img {
+            height: 200px; /* Одинаковая высота для всех фото */
+            width: auto; /* Автоматическая ширина, чтобы не искажалось */
+            max-width: 100%; /* Чтобы не выходили за границы экрана */
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -55,7 +66,7 @@
             document.getElementById('message').style.display = 'block';
             let imagesContainer = document.getElementById('imagesContainer');
 
-            // Добавляем изображения только после нажатия на кнопку
+            // Добавляем изображения в контейнер
             imagesContainer.innerHTML = `
                 <img src="images/photo1.png" alt="Фото 1">
                 <img src="images/photo2.png" alt="Фото 2">
