@@ -33,17 +33,19 @@
             font-size: 20px;
             color: #d147a3;
         }
+        /* НОВОЕ: делаем сетку для фото */
         #imagesContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптация под экран */
             gap: 10px; /* Отступы между фото */
+            justify-content: center; /* Выравнивание фото */
             margin-top: 20px;
         }
+        /* Делаем все фото одинакового размера */
         #imagesContainer img {
-            width: 150px; /* Одинаковая ширина */
-            height: 150px; /* Одинаковая высота */
-            object-fit: cover; /* Обрезка без искажения */
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Чтобы фото не искажались */
             border-radius: 10px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
@@ -58,7 +60,7 @@
         <button onclick="showImages()">Ну, наверное, Женя и Оля 🤭</button>
         <p id="message">Правильно! 💖</p>
         
-        <div id="imagesContainer"></div>
+        <div id="imagesContainer"></div> <!-- Здесь будут фото -->
     </div>
 
     <script>
